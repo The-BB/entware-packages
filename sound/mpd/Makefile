@@ -3,6 +3,7 @@
 # See /LICENSE for more information.
 #
 # mpd uses signalfd() and epoll() in some strange way, so we disabled it for old kernels
+#XXX E-K patch
 
 include $(TOPDIR)/rules.mk
 
@@ -193,9 +194,10 @@ endif
 
 define Package/mpd/install
 	$(INSTALL_DIR) $(1)/opt/bin
+	$(INSTALL_DIR) $(1)/opt/var/music
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/bin/mpd $(1)/opt/bin/
 	$(INSTALL_DIR) $(1)/opt/etc
-	$(INSTALL_CONF) $(PKG_BUILD_DIR)/doc/mpdconf.example $(1)/opt/etc/mpd.conf
+	$(INSTALL_CONF) ./files/mpd.conf $(1)/opt/etc/
 	$(INSTALL_DIR) $(1)/opt/etc/init.d
 	$(INSTALL_BIN) ./files/S89mpd $(1)/opt/etc/init.d/
 endef
