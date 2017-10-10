@@ -1,15 +1,14 @@
 #
-# Copyright (C) 2006-2014 OpenWrt.org
-#
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# Downgraded from r182 - the last one working with kernel 2.6.22
+# Downgraded from r182 to r116 (for E-K)- the last one working with kernel 2.6.22
+#XXX
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mjpg-streamer
-PKG_REV:=181
+PKG_REV:=116
 PKG_VERSION:=r$(PKG_REV)
 PKG_RELEASE:=2
 PKG_MAINTAINER:=Roger D <rogerdammit@gmail.com>
