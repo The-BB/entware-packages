@@ -4,17 +4,16 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# Upgraded from 3.7.2
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python-lxml
-PKG_VERSION:=3.8.0
+PKG_VERSION:=4.0.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=lxml-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=http://lxml.de/files/
-PKG_HASH:=736f72be15caad8116891eb6aa4a078b590d231fdc63818c40c21624ac71db96
+PKG_HASH:=f7bc9f702500e205b1560d620f14015fec76dcd6f9e889a946a2ddcc3c344fd0
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(BUILD_VARIANT)-lxml-$(PKG_VERSION)
 PKG_UNPACK=$(HOST_TAR) -C $(PKG_BUILD_DIR) --strip-components=1 -xzf $(DL_DIR)/$(PKG_SOURCE)

@@ -4,7 +4,6 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# super voodoo dance (((
 
 include $(TOPDIR)/rules.mk
 
@@ -15,8 +14,6 @@ PKG_RELEASE:=1
 PKG_SOURCE:=cryptography-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://pypi.python.org/packages/9c/1a/0fc8cffb04582f9ffca61b15b0681cf2e8588438e55f61403eb9880bd8e0
 PKG_HASH:=d04bb2425086c3fe86f7bc48915290b13e798497839fbb18ab7f6dffcf98cc3a
-
-PKG_BUILD_DEPENDS:=python-cffi/host
 
 PKG_LICENSE:=Apache-2.0 BSD-3-Clause
 PKG_LICENSE_FILES:=LICENSE.APACHE LICENSE.BSD

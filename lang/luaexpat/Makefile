@@ -39,7 +39,7 @@ define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 	EXPAT_INC="-I$(STAGING_DIR)/opt/include/" \
 	LUA_INC="-I$(STAGING_DIR)/opt/include/" \
-	LUA_LDIR="$(STAGING_DIR)/opt/lib/" \
+	LUA_LIBDIR="$(STAGING_DIR)/opt/lib/" \
 	COMPAT_DIR="$(PKG_BUILD_DIR)/compat-5.1r5" \
 	LDFLAGS="-shared $(TARGET_LDFLAGS)" \
 	CC="$(TARGET_CC) $(TARGET_CFLAGS) $(FPIC) -std=c99" \
