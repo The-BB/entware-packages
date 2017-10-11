@@ -20,7 +20,7 @@ PKG_INSTALL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-ifdef CONFIG_mipsel
+ifneq ($(ARCH),mips,mipsel,)
   TARGET_CFLAGS += -std=c99 -fno-ipa-sra
 endif
 

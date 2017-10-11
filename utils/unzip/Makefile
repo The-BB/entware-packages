@@ -66,7 +66,8 @@ endef
 
 define Package/unzip/install
 	$(INSTALL_DIR) $(1)/opt/bin/
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/bin/{funzip,unzip,unzipsfx,zipgrep} \
+	$(INSTALL_BIN) \
+		$(PKG_INSTALL_DIR)/opt/bin/{funzip,unzip,unzipsfx,zipgrep} \
 		$(1)/opt/bin/
 	$(LN) unzip $(1)/opt/bin/zipinfo
 endef

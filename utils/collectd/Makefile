@@ -275,7 +275,7 @@ define Package/collectd/install
 	$(INSTALL_DIR) $(1)/opt/sbin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/sbin/{collectd,collectdmon} $(1)/opt/sbin/
 	$(INSTALL_DIR) $(1)/opt/lib
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/lib/{libcollectdclient.so,libcollectdclient.so.1,libcollectdclient.so.1.0.0} $(1)/opt/lib/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/opt/lib/libcollectdclient.so* $(1)/opt/lib/
 	$(INSTALL_DIR) $(1)/opt/share/collectd
 	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/opt/share/collectd/types.db $(1)/opt/share/collectd/
 	$(INSTALL_DIR) $(1)/opt/etc
