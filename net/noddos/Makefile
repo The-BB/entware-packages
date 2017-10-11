@@ -11,13 +11,12 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=noddos
 PKG_RELEASE:=1
 PKG_LICENSE:=GPLv3
+PKG_MAINTAINER:=Steven Hessing <steven.hessing@gmail.com>
 
-PKG_SOURCE_VERSION:=0.4.1
+PKG_SOURCE_VERSION:=0.5.2
 PKG_SOURCE_URL:=https://github.com/noddos/noddos/releases/download/v$(PKG_SOURCE_VERSION)/
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_VERSION).tar.xz
-PKG_HASH:=f676b1c7d9aa6496184b73eacbbfe27b4f54e53c726769ef9ceeeda9c31a7fa3
-
-PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)-$(PKG_SOURCE_VERSION)
+PKG_HASH:=63fe85fc4a588da2d71b7b7db68f1c80ba19520467a3800bdb43bc516a6cff72
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)-$(PKG_SOURCE_VERSION)
 
@@ -30,7 +29,7 @@ define Package/noddos
 	CATEGORY:=Network
 	TITLE:=noddos -- device-aware cloud-powered firewall
 	URL:=https://www.noddos.io/
-	DEPENDS:=+libstdcpp +libnetfilter-conntrack +libcurl +libopenssl +openssl-util +ca-bundle +ca-certificates +wget +bzip2 +libtins +ipset
+	DEPENDS:=+libstdcpp +libnetfilter-conntrack +libcurl +libopenssl +openssl-util +ca-bundle +ca-certificates +wget +bzip2 +libtins +ipset +libpthread
 endef
 
 define Package/noddos/description
@@ -47,7 +46,6 @@ define Package/noddos/install
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_DIR) $(1)/etc/noddos
-	$(INSTALL_DIR) $(1)/var/lib/noddos
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/noddos $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tools/getnoddosdeviceprofiles $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tools/makenoddoscert.sh $(1)/usr/bin
