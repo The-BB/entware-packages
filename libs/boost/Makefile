@@ -358,11 +358,11 @@ define Build/Compile
 	( cd $(PKG_BUILD_DIR) ; \
 		echo "using gcc : $(ARCH) : $(GNU_TARGET_NAME)-gcc : <compileflags>\"$(TARGET_CFLAGS)\" <cxxflags>\"$(TARGET_CXXFLAGS) $(EXTRA_CXXFLAGS)\" <linkflags>\"$(TARGET_LDFLAGS)\" ;" > tools/build/src/user-config.jam ; \
 		$(if $(CONFIG_PACKAGE_boost-python3), \
-			echo "using python : 3.6 : $(STAGING_DIR_ROOT)/opt/bin/python3 : $(STAGING_DIR)/opt/include/python3.6/ : $(STAGING_DIR)/opt/lib/python3.6/ ;" >> \
+			echo "using python : 3.6 : : $(STAGING_DIR)/opt/include/python3.6/ : $(STAGING_DIR)/opt/lib/libpython3.6.so ;" >> \
 				tools/build/src/user-config.jam; \
 		) \
 		$(if $(CONFIG_PACKAGE_boost-python), \
-			echo "using python : 2.7 : $(STAGING_DIR_ROOT)/opt/bin/python :	$(STAGING_DIR)/opt/include/python2.7/ : $(STAGING_DIR)/opt/lib/python2.7/ ;" >> \
+			echo "using python : 2.7 : : $(STAGING_DIR)/opt/include/python2.7/ : $(STAGING_DIR)/opt/lib/libpython2.7.so ;" >> \
 				tools/build/src/user-config.jam; \
 		) \
 		b2 \
