@@ -161,7 +161,6 @@ define Package/pulseaudio-daemon/install
 		$(PKG_INSTALL_DIR)/opt/lib/pulse-$(PKG_VERSION)/modules/module*.so \
 		$(1)/opt/lib/pulse-$(PKG_VERSION)/modules/
 
-	chmod -R 0644 $(1)/opt/etc/pulse/*
 endef
 
 define Package/pulseaudio-tools/install
