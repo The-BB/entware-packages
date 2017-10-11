@@ -2,8 +2,7 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# Downgraded from r182 to r116 (for E-K)- the last one working with kernel 2.6.22
-#XXX
+#XXX Downgraded from r182 to r116 (for E-K)- the last one working with kernel 2.6.22
 
 include $(TOPDIR)/rules.mk
 
