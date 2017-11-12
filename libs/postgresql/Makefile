@@ -215,7 +215,6 @@ define Package/pgsql-server/install
 
 	$(INSTALL_DIR) $(1)/opt/etc/init.d
 	$(INSTALL_BIN) ./files/S98postgresql $(1)/opt/etc/init.d/
-
 endef
 
 define Build/InstallDev
