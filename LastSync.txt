@@ -1,8 +1,7 @@
-commit 5edc198f37e4b05a27644384001196f87ff6661f
-Merge: 3c6b5c77 73dbc6cf
-Author: champtar <champetier.etienne@gmail.com>
-Date:   Fri Sep 15 10:29:48 2017 -0700
+commit eb127abc0f5509495fffa149da472077bd9b3a4d
+Author: Etienne Champetier <champetier.etienne@gmail.com>
+Date:   Sat Nov 11 21:52:49 2017 -0800
 
-    Merge pull request #4630 from marcin1j/pr/20170725-htpdate-init-scripts
+    build,travis: accept commits with '_'
     
-    htpdate: modify init scripts to use procd and uci configuration
+    Signed-off-by: Etienne Champetier <champetier.etienne@gmail.com>
