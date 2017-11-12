@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tor
-PKG_VERSION:=0.2.9.12
+PKG_VERSION:=0.3.1.8
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://dist.torproject.org/ \
 	https://archive.torproject.org/tor-package-archive
-PKG_HASH:=6e7466625d53812f23c2ad60a873c5855f63f756fde0fc5cbeda8d32cee1086b
+PKG_HASH:=7df6298860a59f410ff8829cf7905a50c8b3a9094d51a8553603b401e4b5b1a1
 PKG_MAINTAINER:=Hauke Mehrtens <hauke@hauke-m.de>
 PKG_LICENSE_FILES:=LICENSE
 
@@ -97,6 +97,7 @@ CONFIGURE_ARGS += \
 	--disable-libscrypt \
 	--disable-unittests \
 	--disable-largefile \
+	--disable-lzma
 
 EXTRA_CFLAGS += -std=gnu99
 
