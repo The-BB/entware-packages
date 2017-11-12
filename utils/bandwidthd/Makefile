@@ -175,7 +175,7 @@ define Package/bandwidthd-sqlite/install
 	$(INSTALL_DIR) $(1)/opt/etc/config
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/etc/bandwidthd.conf $(1)/opt/etc/config/
 	$(INSTALL_DIR) $(1)/opt/etc/init.d
-#	$(INSTALL_BIN) ./files/bandwidthd-sqlite.init $(1)/opt/etc/init.d/bandwidthd
+	$(INSTALL_BIN) ./files/S99bandwidthd $(1)/opt/etc/init.d
 	$(INSTALL_DIR) $(1)/opt/share/www/bandwidthd
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/phphtdocs/*.gif $(1)/opt/share/www/bandwidthd/
 	$(INSTALL_DATA) ./files/phphtdocs-sqlite/details.php $(1)/opt/share/www/bandwidthd/
